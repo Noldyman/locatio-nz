@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #3f5946;
+  --secondary: #cc8020;
+  --tertiary: #b7d0d2;
+  --white: #fff4eb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: var(--tertiary);
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  background-color: var(--white);
+  color: var(--primary);
+  font-size: large;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: var(--primary) 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+ul {
+  margin-top: 0;
+  list-style-type: "- ";
+  padding-left: 10px;
+}
+
+table {
+  width: 95%;
+  margin: 0 auto 10px auto;
+  border: none;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--tertiary);
+  padding: 10px 5px;
+  text-align: start;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+tbody tr:hover {
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+tbody tr:hover a {
+  color: var(--secondary);
+}
+
+td {
+  padding: 5px;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+#map {
+  margin: auto;
+  height: 500px;
+  width: 100%;
+}
+
+.view-buttons {
+  margin: 10px auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  gap: 10px;
 }
